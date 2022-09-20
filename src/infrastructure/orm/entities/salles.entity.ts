@@ -9,7 +9,7 @@ import { Injectable } from '@nestjs/common';
 
 @Entity({ name: 'tb_salles' })
 @Injectable()
-export class ProductsEntity {
+export class SallesEntity {
   @PrimaryGeneratedColumn('uuid')
   id?: string;
 

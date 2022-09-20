@@ -3,7 +3,7 @@ import {
   TypeOrmModuleAsyncOptions,
 } from '@nestjs/typeorm';
 import { ConfigService, ConfigModule } from '@nestjs/config';
-import { ProductsEntity } from './orm/entities/salles.entity';
+import { SallesEntity } from './orm/entities/salles.entity';
 
 export default class TypeORMConfig {
   static getORMConfig(): TypeOrmModuleOptions {
@@ -15,7 +15,7 @@ export default class TypeORMConfig {
       host: process.env.DB_HOST,
       port: +process.env.DB_PORT,
       synchronize: Boolean(process.env.DB_SYNCHRONIZE),
-      entities: [ProductsEntity],
+      entities: [SallesEntity],
     };
   }
 }
